@@ -61,3 +61,5 @@ Currently it's not possible to define multiple properties to opt-out from.
 
 **Can domains be configured to opt-out from?**  
 Opting out works for the current `protocol://host:port` combination only.
+
+[ga-optout]: https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
