@@ -1,0 +1,25 @@
+{
+  "name": "gaoo.js",
+  "description": "Simple Google Analytics Opt-Out helper.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/thasmo/gaoo.js"
+  },
+  "devDependencies": {
+    "gulp": "~3.9",
+    "gulp-util": "~3.0",
+    "gulp-plumber": "~1.0",
+    "gulp-load-plugins": "~1.1",
+    "gulp-uglify": "~1.5",
+    "gulp-rename": "~1.2",
+    "gulp-notify": "~2.2",
+    "gulp-xo": "~0.7",
+    "del": "~2.1",
+    "require-dir": "~0.3",
+    "run-sequence": "~1.1"
+  },
+  "xo": {
+    "envs": ["browser"]
+  }
+}
