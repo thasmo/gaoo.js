@@ -5,17 +5,10 @@
 		var identifier = 'ga-disable-' + key;
 		var storageKey = 'gaoo';
 
-		// Prepare `respectDNT` option.
 		respectDNT = respectDNT || true;
 
 		var initialize = function () {
-
-			// Persist initial state.
-			if (!loaded()) {
-				persist(respectDNT && dnt())
-			}
-
-			// Update recurring state.
+			!loaded() && persist(respectDNT && dnt());
 			update(check());
 		};
 
