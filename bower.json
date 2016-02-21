@@ -1,0 +1,19 @@
+{
+  "name": "gaoo.js",
+  "description": "Simple Google Analytics Opt-Out helper.",
+  "keywords": ["google", "analytics", "opt-out", "opt", "out", "tracking"],
+  "main": "src/gaoo.js",
+  "authors": [
+    "Thomas Deinhamer <thasmo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/thasmo/gaoo.js",
+  "moduleType": ["globals"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
