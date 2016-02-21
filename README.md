@@ -11,10 +11,10 @@ if not configured otherwise.
 ## Usage
 
 ```js
-// Initialize on page load or ...
+// Initialize on page load with respect to DNT.
 window.gaoo('UA-123456-1');
 
-// ... initialize on page load and do not respect the `DNT` browser setting.
+// ... initialize on page load and do not respect DNT.
 window.gaoo('UA-123456-1', false);
 
 // Actively opt-out from Google Analytics tracking.
@@ -32,6 +32,9 @@ if(window.gaoo('UA-123456-1').check()) {
 
 // Get opt-out identification string.
 var identifier = window.gaoo('UA-123456-1').identifier;
+
+// Get DNT browser setting.
+window.console.log(window.gaoo('UA-123456-1').dnt()); // true or false
 ```
 
 ### Examples
