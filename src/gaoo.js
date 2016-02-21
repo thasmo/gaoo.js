@@ -23,13 +23,6 @@
 			return window.localStorage.getItem(storageKey) !== null;
 		};
 
-		var dnt = function () {
-			return window.navigator.doNotTrack == '1' ||
-			       window.navigator.doNotTrack == 'yes' ||
-			       window.navigator.msDoNotTrack == '1' ||
-			       window.doNotTrack == '1';
-		};
-
 		var persist = function (value) {
 			window.localStorage.setItem(storageKey, value);
 		};
@@ -50,6 +43,13 @@
 
 		var check = function () {
 			return window.localStorage.getItem(storageKey);
+		};
+
+		var dnt = function () {
+			return window.navigator.doNotTrack == '1' ||
+			       window.navigator.doNotTrack == 'yes' ||
+			       window.navigator.msDoNotTrack == '1' ||
+			       window.doNotTrack == '1';
 		};
 
 		initialize();
