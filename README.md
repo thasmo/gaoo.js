@@ -4,14 +4,18 @@
 
 `gaoo.js` is a small helper script to [opt-out][ga-optout] from Google Analytics Tracking.
 
-It uses local storage to remember an opt-out and will set a `window`
-property which Google Analytics [inspects][ga-optout] to decide whether to track or not.
+It uses local storage to remember an opt-out and will set a `window` property which Google Analytics
+[inspects][ga-optout] to decide whether to track or not. It supports `DNT` and respects it by default,
+if not configured otherwise.
 
 ## Usage
 
 ```js
-// Initialize on page load. This needs to be called before ga.js is executed.
+// Initialize on page load or ...
 window.gaoo('UA-123456-1');
+
+// ... initialize on page load and do not respect the `DNT` browser setting.
+window.gaoo('UA-123456-1', false);
 
 // Actively opt-out from Google Analytics tracking.
 window.gaoo('UA-123456-1').enable();
@@ -21,7 +25,9 @@ window.gaoo('UA-123456-1').disable();
 
 // Check if currently opted out.
 if(window.gaoo('UA-123456-1').check()) {
-  window.console.log('Currently opted out.');
+  window.console.info('Currently opted out.');
+} else {
+  window.console.info('Tracking page-view now.');
 }
 
 // Get opt-out identification string.
