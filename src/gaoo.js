@@ -12,7 +12,7 @@
 
 			// Persist initial state.
 			if (!loaded()) {
-				persist(respectDNT && hasDNT())
+				persist(respectDNT && dnt())
 			}
 
 			// Update recurring state.
@@ -23,7 +23,7 @@
 			return window.localStorage.getItem(storageKey) !== null;
 		};
 
-		var hasDNT = function () {
+		var dnt = function () {
 			return window.navigator.doNotTrack == '1' ||
 			       window.navigator.doNotTrack == 'yes' ||
 			       window.navigator.msDoNotTrack == '1' ||
@@ -58,6 +58,7 @@
 			enable: enable,
 			disable: disable,
 			check: check,
+			dnt: dnt,
 			identifier: identifier
 		};
 	};
